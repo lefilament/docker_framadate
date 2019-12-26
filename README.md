@@ -7,7 +7,7 @@ The original files being protected by CeCILL-B license, the same license is kept
 Docker-compose file to be used with this can be found on [corresponding Le Filament Ansible role](https://github.com/lefilament/ansible/tree/master/roles/docker_framadate/templates/docker-compose.yaml.j2)
 
 
-This docker image is also pushed on [Docker Hub]((https://hub.docker.com/r/lefilament/framadate)
+This docker image is also pushed on [Docker Hub](https://hub.docker.com/r/lefilament/framadate)
 
 This image is basically downloading Framadate from [Framasoft gitlab repository](https://framagit.org/framasoft/framadate/framadate) and serving it on port 80 (when original image relies on cloning locally the Framadate repository), it also replaces mysql-client with mariadb-client.
 
