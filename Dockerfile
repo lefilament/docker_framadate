@@ -23,6 +23,9 @@ ENV COMPOSER_ALLOW_SUPERUSER 0
 RUN git clone https://framagit.org/framasoft/framadate/framadate.git /var/www/framadate
 WORKDIR /var/www/framadate
 
+# Mount /var/www/framadate/tpl_c to allow Smarty to generate cache pages
+VOLUME ["/var/www/framadate/tpl_c"]
+
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 EXPOSE 80
 ENTRYPOINT ["entrypoint"]
