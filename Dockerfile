@@ -1,4 +1,4 @@
-FROM php:apache
+FROM php:7-apache
 
 MAINTAINER maintenance@le-filament.com
 
@@ -7,7 +7,7 @@ RUN docker-php-ext-install intl && docker-php-ext-install pdo_mysql
 
 RUN a2enmod rewrite
 
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.10 /usr/bin/composer /usr/bin/composer
 
 COPY php.ini /usr/local/etc/php/php.ini
 COPY apache-framadate.conf /etc/apache2/sites-enabled/framadate.conf
